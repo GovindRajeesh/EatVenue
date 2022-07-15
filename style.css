@@ -13,6 +13,7 @@ html,body{
 
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x:hidden;
 }
 
 h1,h2,h3{
@@ -193,7 +194,7 @@ footer{
     color:grey
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     .navbar-link-group:not(.show){
         display: none;
     }
