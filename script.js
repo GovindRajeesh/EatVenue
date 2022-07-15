@@ -1,5 +1,17 @@
 document.querySelector(".navbar-links-toggle").addEventListener("click", () => {
-    document.querySelector(".navbar-link-group").classList.toggle("show")
+    var classes=document.querySelector(".navbar-link-group").classList
+    var linkGroup=document.querySelector(".navbar-link-group")
+    if(linkGroup.classList.contains("show")){
+        linkGroup.style.animation="slide-down-reverse 1s"
+        setTimeout(()=>{
+            linkGroup.classList.remove("show")
+            linkGroup.style=""
+        },1000)
+    }else{
+            linkGroup.classList.add("show")
+    }
+    
+    
 })
 
 document.querySelectorAll(".navbar-link").forEach((l)=>{

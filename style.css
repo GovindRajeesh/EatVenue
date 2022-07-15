@@ -81,8 +81,9 @@ a:hover{
     color:var(--navbar-fg);
 }
 
-.show{
-    animation: scroll-open-up 1s;
+.navbar-link-group.show{
+    animation: slide-down 1s;
+    /* transform: translateX(-100%); */
 }
 
 .navbar-link-group{
@@ -242,8 +243,20 @@ footer{
 }
 
 @-webkit-keyframes slide-down{
-    from{
-        transform: translateY(0%);
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slide-down-reverse{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
     }
 }
 
