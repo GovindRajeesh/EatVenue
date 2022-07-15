@@ -1,0 +1,263 @@
+:root{
+    --navbar-bg:rgb(255, 136, 0);
+    --navbar-fg:rgb(240, 240, 240);
+}
+
+html,body{
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1,h2,h3{
+    font-weight: normal;
+}
+
+a{
+    color: rgb(4, 89, 185);
+    text-decoration: none;
+}
+
+a.icon-link-white{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    opacity:0.5
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.t-center{
+    text-align: center;
+}
+
+.dflex-j-center{
+    display: flex;
+    justify-content: center;
+}
+
+.container-fluid{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+}
+
+.navbar-outer{
+    margin-bottom: 2.55rem;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    height: 2rem;
+    padding: 5px;
+    background-color: var(--navbar-bg);
+    display: flex;
+    align-items: center;
+    color:var(--navbar-fg);
+    z-index: 100;
+}
+
+.navbar-links-toggle{
+    display: none;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    color:var(--navbar-fg);
+}
+
+.show{
+    animation: scroll-open-up 1s;
+}
+
+.navbar-link-group{
+    display: flex;
+    margin-right: 1rem;
+}
+
+.navbar-link-group>*:not(:last-child){
+    margin-right: 10px;
+}
+
+.navbar-brand{
+    /* font-weight: bold; */
+    font-size: larger;
+    color: var(--navbar-fg);
+}
+
+.navbar-link{
+    color:var(--navbar-fg);
+}
+
+.hero-img{
+    position: relative;
+    background-image: url('./assets/hero-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    width:100%;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero-body{
+    background-color: rgba(75, 73, 73, 0.5);
+    padding: 15px;
+    color:white;
+}
+
+.grid{
+    display: flex;
+}
+
+
+.about-img{
+    width: 18rem;
+    height:18rem;
+}
+
+#why-us{
+    background-color: rgb(255, 80, 80);
+    color:white;
+    margin-top: 0%;
+}
+
+
+.grid.about>.content:not(.show),
+.grid.contact>.content:not(.show),
+.img-anim:not(.show)
+{
+    opacity: 0;
+}
+
+.grid.about>.content,.grid.contact>.content{
+    flex:10;
+}
+
+
+.grid.about>.content,.grid.contact>.content{
+    flex:25;
+    background-color: rgb(46, 46, 46);
+    color: white;
+    padding: 10px;
+}
+
+.grid.about>.content.show,
+.grid.contact>.content.show{
+    animation: scroll-open-right 1s;
+}
+
+.grid.images{
+    margin-bottom: 1rem;
+}
+
+.grid-image{
+    width:18rem;
+    height:18rem;
+}
+
+.grid-image:not(:last-child){
+    margin-right: 1rem;
+}
+
+img.hoverable:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.img-anim.show{
+    animation: scroll-open 1s;
+}
+
+.smedia{
+    font-size: 2rem;
+}
+
+footer{
+    color:grey
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-link-group:not(.show){
+        display: none;
+    }
+
+    .navbar-links-toggle{
+        display: inherit;
+        margin-right: 5px;
+    }
+
+    .navbar-link-group{
+        position: fixed;
+        flex-direction: column;
+        background-color: var(--navbar-bg);
+        margin-top: 7.5rem;
+        left:0;
+        width: 100%;
+        padding:15px;
+        right:0;
+    }
+
+    .navbar-link-group>*{
+        margin-bottom:2px;
+    }
+
+    .grid{
+        flex-direction: column;
+    }
+
+    .grid.contact{
+        flex-direction: column;
+    }
+
+    .about-img{
+        width: 100%;
+    }
+
+    .grid-image{
+        width: 100%;
+    }
+
+    .grid-image:not(:last-child){
+        margin-bottom: 1rem;
+    }
+}
+
+@-webkit-keyframes slide-down{
+    from{
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes scroll-open{
+    from{
+        transform: scale(0);    
+    }
+}
+
+@-webkit-keyframes scroll-open-right{
+    from{
+        transform: scaleX(0);
+    }
+}
+
+@-webkit-keyframes scroll-open-up{
+    from{
+        transform: scaleY(0);    
+    }
+}
+
