@@ -1,6 +1,9 @@
 :root{
     --navbar-bg:rgb(255, 136, 0);
     --navbar-fg:rgb(240, 240, 240);
+    --red:rgb(255, 80, 80);
+    --blue:rgb(4, 89, 185);
+    --dark:rgb(46, 46, 46);
 }
 
 html,body{
@@ -17,7 +20,7 @@ h1,h2,h3{
 }
 
 a{
-    color: rgb(4, 89, 185);
+    color: var(--blue);
     text-decoration: none;
 }
 
@@ -131,9 +134,8 @@ a:hover{
 }
 
 #why-us{
-    background-color: rgb(255, 80, 80);
+    background-color: var(--red);
     color:white;
-    margin-top: 0%;
 }
 
 
@@ -151,7 +153,7 @@ a:hover{
 
 .grid.about>.content,.grid.contact>.content{
     flex:25;
-    background-color: rgb(46, 46, 46);
+    background-color: var(--dark);
     color: white;
     padding: 10px;
 }
